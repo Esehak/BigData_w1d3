@@ -17,6 +17,9 @@ public class WordCount {
     public static List<Pair> r4 = new ArrayList<Pair>();
 
 
+    public WordCount(){}
+
+
     public WordCount(int mapperCount, int reducerCount) {
         this.reducerCount=reducerCount;
         this.mapperCount= mapperCount;

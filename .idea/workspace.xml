@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7658e757-f3cd-483b-91e8-a517b147eabf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -629,11 +628,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493989842367</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Last update Lab4">
+      <created>1493990602564</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493990602564</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2922000" />
+    <option name="totallyTimeSpent" value="2949000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,7 +694,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="checkLab4" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkLab4" />
+    <MESSAGE value="Last update Lab4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last update Lab4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

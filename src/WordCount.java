@@ -9,7 +9,7 @@ public class WordCount {
 
     public int mapperCount;
     public int reducerCount;
-    public Mapper[] mappers;
+    public InMapper[] inMappers;
     public  Reducer[] reducers;
     public static List<Pair> r1 = new ArrayList<Pair>();
     public static List<Pair> r2 = new ArrayList<Pair>();
@@ -23,7 +23,7 @@ public class WordCount {
     public WordCount(int mapperCount, int reducerCount) {
         this.reducerCount=reducerCount;
         this.mapperCount= mapperCount;
-        mappers = new Mapper[this.mapperCount];
+        inMappers = new InMapper[this.mapperCount];
         reducers = new Reducer[this.reducerCount];
         this.initialize();
 
@@ -31,7 +31,7 @@ public class WordCount {
 
     public void initialize(){
         for(int i=0; i< this.mapperCount; i++){
-            this.mappers[i] = new Mapper();
+            this.inMappers[i] = new InMapper();
         }
         for(int i =0; i <this.reducerCount; i++){
             this.reducers[i]= new Reducer();

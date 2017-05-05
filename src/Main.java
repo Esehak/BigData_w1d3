@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);  // Reading from System.in
-        System.out.println("How Many Mapper that u need: ");
+        System.out.println("How Many InMapper that u need: ");
         m = reader.nextInt();
 
         Scanner reader1 = new Scanner(System.in);  // Reading from System.in
@@ -35,14 +35,14 @@ public class Main {
             String[] words = data[i].split("[\\s\\-\\,\\'\\.\"]");
             for (String word : words) {
                 if (Pattern.matches("[a-zA-Z]+", word)) {
-                    wc.mappers[i].add(new Pair(word.toLowerCase(), 1));
+                    wc.inMappers[i].add(new Pair(word.toLowerCase(), 1));
                 }
             }
         }
 
-        for (Mapper mapper : wc.mappers) {
-            mapper.cleanup();
-            Collections.sort(mapper.pairs, new Compare());
+        for (InMapper inMapper : wc.inMappers) {
+            inMapper.cleanup();
+            Collections.sort(inMapper.pairs, new Compare());
         }
 
 
@@ -50,8 +50,8 @@ public class Main {
         printResult(wc);
     }
     private static void addToReducer(WordCount wc) {
-        for (Mapper mapper : wc.mappers) {
-            for (Pair pair : mapper.map.keySet()) {
+        for (InMapper inMapper : wc.inMappers) {
+            for (Pair pair : inMapper.map.keySet()) {
                 int partition = wc.getPartition(pair.word);
                 if (!(wc.reducers[partition].groupByPairs.
                         contains(new GroupByPair(pair.word, pair.fre))
@@ -73,8 +73,8 @@ public class Main {
 
     private static void printResult(WordCount wc) {
         for (int i = 0; i < wc.mapperCount; i++) {
-            System.out.println("Mapper " + i + "output");
-            for (Pair p : wc.mappers[i].pairs) {
+            System.out.println("InMapper " + i + "output");
+            for (Pair p : wc.inMappers[i].pairs) {
                 System.out.println("< " + p.word + ", " + p.fre + "  >");
             }
 

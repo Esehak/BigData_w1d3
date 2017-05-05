@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -8,24 +9,24 @@ import java.util.regex.Pattern;
 public class Mapper {
     public List<Pair> pairs;
 
+    public HashMap<Pair, Integer> map;
     public Mapper(){
         this.pairs= new ArrayList<>();
-
+        this.map=new HashMap<>();
     }
-
-
 
     public void add(Pair pair){
-        if(!this.pairs.contains(new Pair(pair.word, pair.fre))){
-            this.pairs.add(pair);
-        }
+        int count=map.getOrDefault(pair,0)+1;
+        String w=pair.word;
+        Pair p=new Pair(w,count);
+        map.put(p,count);
 
-        else {
-            Pair p= this.pairs.stream().filter(a->a.word.equals(pair.word))
-                    .findFirst().get();
-            p.fre= p.fre + pair.fre;
-        }
     }
+    void cleanup(){
+        pairs= new ArrayList<>(map.keySet());
+    }
+
+
 
 
 }

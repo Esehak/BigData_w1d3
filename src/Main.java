@@ -10,6 +10,7 @@ public class Main {
     public static int m;
     public static int r;
     //this is lab----
+    // this is also comment
 
     public static void main(String[] args) {
 
@@ -40,6 +41,7 @@ public class Main {
         }
 
         for (Mapper mapper : wc.mappers) {
+            mapper.cleanup();
             Collections.sort(mapper.pairs, new Compare());
         }
 
@@ -49,7 +51,7 @@ public class Main {
     }
     private static void addToReducer(WordCount wc) {
         for (Mapper mapper : wc.mappers) {
-            for (Pair pair : mapper.pairs) {
+            for (Pair pair : mapper.map.keySet()) {
                 int partition = wc.getPartition(pair.word);
                 if (!(wc.reducers[partition].groupByPairs.
                         contains(new GroupByPair(pair.word, pair.fre))

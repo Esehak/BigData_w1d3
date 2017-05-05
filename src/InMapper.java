@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 /**
  * Created by Esehak on 5/4/2017.
  */
-public class Mapper {
+public class InMapper {
     public List<Pair> pairs;
 
     public HashMap<Pair, Integer> map;
-    public Mapper(){
+    public InMapper(){
         this.pairs= new ArrayList<>();
         this.map=new HashMap<>();
     }

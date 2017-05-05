@@ -9,6 +9,7 @@ public class Main {
 
     public static int m;
     public static int r;
+    //this is lab----
 
     public static void main(String[] args) {
 
